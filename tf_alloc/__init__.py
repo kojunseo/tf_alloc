@@ -11,5 +11,6 @@ from .gpu import current
 
 __all__ = [
     "get_gpu_objects",
-    "allocate"
+    "allocate",
+    "current"
 ]
