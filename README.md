@@ -1,5 +1,9 @@
 # tf_alloc
 > Simpliying GPU allocation for Tensorflow
+* Using it by pip installation
+    pip install tf-alloc
+
+
 
 ## ⭐️ Why tf_alloc? Problems?
 * Compare to pytorch, tensorflow allocate all GPU memory to single training.
