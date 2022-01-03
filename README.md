@@ -2,9 +2,7 @@
 > Simpliying GPU allocation for Tensorflow
 * Developer: korkite (Junseo Ko)
 
-## Installation
-* Using it by pip installation
-    
+## Installation  
     pip install tf-alloc
 
 
