@@ -1,7 +1,7 @@
 # tf_alloc
 > Simpliying GPU allocation for Tensorflow
 
-## Why tf_alloc? Problems?
+## ⭐️ Why tf_alloc? Problems?
 * Compare to pytorch, tensorflow allocate all GPU memory to single training.
 * However, it is too much waste because, some training does not use whole GPU memory.
 * To solve this problem, TF engineers use two methods.
@@ -11,10 +11,10 @@
 
 * However, these methods require complex code and memory management.
 
-## Why tf_alloc? How to solve?
-#### tf_alloc is for automatic gpu allocation using two methods.
+## ⭐️ Why tf_alloc? How to solve?
+#### tf_alloc simplfy and automate GPU allocation using two methods.
 
-## How to allocate?
+## ⭐️ How to allocate?
 * Before using tf_alloc, you have to install tensorflow fits for your environment.
 * This library does not install specific tensorflow version.
 
@@ -33,7 +33,7 @@ import tensorflow as tf
 * percentage = the percentage of memory usage on single gpu. 1.0 for maximum use.
 
 
-## Additional Function.
+## ⭐️ Additional Function.
 ### GET GPU Objects
     gpu_objs = get_gpu_objects()
 
