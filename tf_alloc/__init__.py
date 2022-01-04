@@ -9,7 +9,7 @@ try:
 except:
     raise ModuleNotFoundError("You must install tensorflow for your environment first. This package doesn't contain tensorflow installation.")
 
-__version__ = "0.0.1"
+__version__ = "0.0.4"
 
 from .gpu import get_gpu_objects
 from .allocate import allocate

@@ -17,12 +17,12 @@ class GPU:
 
     def state(
             self, 
-            gpu_id = True, 
-            total_memory=True, 
-            used = True, 
-            free = True, 
-            percentage_of_use = True,
-            percentage_of_free = True
+            gpu_id:bool = True, 
+            total_memory:bool=True, 
+            used:bool = True, 
+            free:bool = True, 
+            percentage_of_use:bool = True,
+            percentage_of_free:bool = True
         ):
         output_list = []
 
@@ -42,7 +42,7 @@ class GPU:
         return " || ".join(output_list)
 
 
-    def allocate(self, percentage):
+    def allocate(self, percentage:float)->None:
         if percentage == 0:
             raise ValueError("You cannot allocate 0 percentage")
         if type(percentage) != float:
@@ -90,7 +90,7 @@ class GPUs:
         self.num_gpu = 0
         self.gpus = [] 
 
-    def append(self, gpu):
+    def append(self, gpu:int)-> None:
         self.gpus.append(gpu)
         self.num_gpu += 1
 
@@ -101,7 +101,7 @@ class GPUs:
 
         raise IndexError(f"Device index out of range")
 
-    def __indiv__(self,gpu_id,total_memory,used,free,percentage_of_use,percentage_of_free):
+    def __indiv__(self,gpu_id:bool,total_memory:bool,used:bool,free:bool,percentage_of_use:bool,percentage_of_free:bool)-> str:
         output_str_format = "\t{}\n"
         output = ""
         for g in self.gpus:
@@ -113,13 +113,13 @@ class GPUs:
     def __len__(self):
         return len(self.gpus)
 
-    def state(self,gpu_id,total_memory,used,free,percentage_of_use,percentage_of_free) -> str:
+    def state(self,gpu_id:bool,total_memory:bool,used:bool,free:bool,percentage_of_use:bool,percentage_of_free:bool) -> str:
         if self.num_gpu == 0:
             return "There is no GPU in this device"
 
         return f"Num GPUs: {self.num_gpu}\nGPU Stats:\n{self.__indiv__(gpu_id,total_memory,used,free,percentage_of_use,percentage_of_free)}"
 
-def get_gpu_objects():
+def get_gpu_objects()-> GPUs:
     GPU_IN_MACHINE = GPUs()
 
     nvidia_smi = "nvidia-smi"    
@@ -147,13 +147,13 @@ def get_gpu_objects():
 
 
 def current(
-        gpu_id = False, 
-        total_memory=False, 
-        used = False, 
-        free = False, 
-        percentage_of_use = False,
-        percentage_of_free = False
-    ):
+        gpu_id:bool = False, 
+        total_memory:bool=False, 
+        used:bool = False, 
+        free:bool = False, 
+        percentage_of_use:bool = False,
+        percentage_of_free:bool = False
+    )-> None:
     gpu_objs = get_gpu_objects()
     if (
         gpu_id == False and

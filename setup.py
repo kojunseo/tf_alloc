@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(name='tf_alloc', 
       # 프로젝트 명을 입력합니다.
-      version='0.0.3', 
+      version='0.0.4', 
       # 프로젝트 버전을 입력합니다.
       url='https://github.com/KorKite/tf_alloc', 
       # 홈페이지 주소를 입력합니다.
