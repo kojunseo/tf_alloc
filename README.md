@@ -40,21 +40,27 @@ import tensorflow as tf
 
 ## ⭐️ Additional Function.
 ### GET GPU Objects
-    gpu_objs = get_gpu_objects()
+```python3
+from tf_alloc import get_gpu_objects
+gpu_objs = get_gpu_objects()
+```
 
 * To use this code, you can get gpu objects that contains gpu information.
 * You can set GPU backend by using this function.
 
 ### GET CURRENT STATE
 ##### Defualt
-    current(
-        gpu_id = False, 
-        total_memory=False, 
-        used = False, 
-        free = False, 
-        percentage_of_use = False,
-        percentage_of_free = False,
-    )
+```python3
+from tf_alloc import current
+current(
+    gpu_id = False, 
+    total_memory=False, 
+    used = False, 
+    free = False, 
+    percentage_of_use = False,
+    percentage_of_free = False,
+)
+```
 
 * You can use this functions to see current GPU state and possible maximum allocation percentage.
 * Without any parameters, than it only visualize possible maximum allocation percentage.
