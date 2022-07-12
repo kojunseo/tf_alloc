@@ -25,8 +25,8 @@
 
 ```python
 # On the top of the code
-from tf_alloc import allocate as talloc
-talloc(gpu=1, percentage=0.5)
+from tf_alloc import allocate
+allocate(gpu=1, percentage=0.5)
 
 import tensorflow as tf
 """ your code"""
